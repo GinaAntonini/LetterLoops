@@ -10,21 +10,29 @@ namespace LetterLoops
     {
         static void Main(string[] args)
         {
-            //first count how many characters are in the input
+            //first count how many characters are in the input and create a foreach loop to loop over each character of the input
             string input = "abcd";
+            string Repeat = (input.Length * Count);
 
-            //next loop over the input and print out 1st character once (uppercase), insert a dash, then, repeat
-            for (int i = 0; i < input.Count(); i++)
+            foreach (var character in input)
             {
-                var onecharacter = input[i];
-                //if the index is 0, change the letter to uppercase
-                //for all other characters in the input, print and repeat by one more 
-                if (i == 0)
+                //next loop over the input and print out 1st character once (uppercase), insert a dash, then, move on to the next character in the input
+                for (int i = 0; i < input.Count(); i++)
                 {
-                    onecharacter.ToUpper;
-                }
+                    var alpha = input[i];
                     
+                    //after the 1st charcter, for all characters in the input, print the first instance uppercase and repeat the characters in increments of 1 then insert a dash
+                    if (i == 0)
+                    {
+                        alpha.ToString().ToUpper();
+                    }
+
+                    alpha.ToString().ToUpper();
+                    Console.WriteLine(alpha(Repeat), "-");
+
+                }
             }
+            
 
                
                    
